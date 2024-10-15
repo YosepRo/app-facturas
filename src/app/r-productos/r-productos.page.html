@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Agregar Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <!-- Formulario para agregar un nuevo producto -->
+
+  <form [formGroup]="formProducto" (ngSubmit)="agregarProducto()">
+
+    
+    <ion-item>
+      <ion-label  >Ingresar nombre del producto</ion-label>
+      <ion-input placeholder="Nombre del producto" formControlName="nombre" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label  >Descripcion del producto</ion-label>
+      <ion-input placeholder="Descripción del producto" formControlName="descripcion"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label  >Subir imagen del producto</ion-label>
+      <ion-input placeholder="URL de la imagen del producto" formControlName="urlFoto" ></ion-input>
+    </ion-item>
+    
+    <ion-button   type="submit" >Agregar</ion-button>
+
+
+   
+
+
+    
+   
+
+
+
+  </form>
+  </ion-content>

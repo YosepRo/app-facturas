@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Productos</ion-title>
+    <ion-button  (click)="onClick()">salir</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    @if (producto) {
+
+    <ion-item>
+      <ion-label>
+        <h2>Nombre: {{producto.nombre}}</h2>
+      </ion-label>
+
+      <ion-label>
+        <h2>producto descripcion : {{producto.descripcion}}</h2>
+      </ion-label>
+
+      <ion-label>
+        <!-- <h2>producto precio : {{producto.nombre}}</h2> -->
+      </ion-label>
+
+      <img [src]="producto.urlFoto" alt="" />
+    </ion-item>
+    }
+  </ion-list>
+
+  <ion-item>
+    <h2>precio  </h2>
+    <ion-input type="number" placeholder=" 240.2"></ion-input>
+    <ion-button>Añadir carrito</ion-button>
+    <ion-button >
+      Editar
+    </ion-button>
+    <ion-button >
+      Eliminar
+    </ion-button>
+  </ion-item>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <!-- lista de proudctos en cuadros  ocn boton de add cart -->
+  <ion-button (click)="agregar()">Agregar Producto</ion-button>
+  <br />
+  <br />
+  <br />
+  <ion-button (click)="vender()">Realisar venta</ion-button>
+</ion-content>
